@@ -1,0 +1,16 @@
+{
+  "name": "lambda-nodejs-pg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "zip -r nodejs-pg-sample.zip index.js node_modules",
+    "deploy": "aws lambda update-function-code --function-name nodejs-pg-sample --zip-file fileb://./nodejs-pg-sample.zip"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^4.5.1"
+  }
+}
